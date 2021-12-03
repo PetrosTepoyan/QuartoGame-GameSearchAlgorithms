@@ -145,7 +145,7 @@ class AlphaBetaSearch(Search):
                 self.state_utilities[new_state] = v
                 return v
         
-        strategy[state] = move.prev_turn
+        strategy[state] = move
         self.state_utilities[new_state] = v
         
         return v
@@ -185,7 +185,7 @@ class AlphaBetaSearch(Search):
                 return v
                 
             
-        strategy[state] = move.prev_turn
+        strategy[state] = move
         self.state_utilities[new_state] = v  
         
         return v
