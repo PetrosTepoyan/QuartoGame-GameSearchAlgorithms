@@ -1,0 +1,20 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'Report.blg'
+[75] biber-darwin:322> INFO - === Sun Nov 21, 2021, 21:23:41
+[98] Biber.pm:415> INFO - Reading 'Report.bcf'
+[179] Biber.pm:943> INFO - Found 7 citekeys in bib section 0
+[194] Biber.pm:4256> INFO - Processing section 0
+[195] Utils.pm:75> INFO - Globbing data source 'Report.bib'
+[195] Utils.pm:91> INFO - Globbed data source 'Report.bib' to Report.bib
+[207] Biber.pm:4455> INFO - Looking for bibtex format file 'Report.bib' for section 0
+[208] bibtex.pm:1653> INFO - LaTeX decoding ...
+[218] bibtex.pm:1471> INFO - Found BibTeX data source 'Report.bib'
+[251] Utils.pm:304> WARN - month field 'July' in entry 'Mattiussi2018' is not an integer - this will probably not sort properly.
+[287] Utils.pm:304> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[298] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[299] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[299] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[299] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[310] bbl.pm:652> INFO - Writing 'Report.bbl' with encoding 'UTF-8'
+[313] bbl.pm:755> INFO - Output to Report.bbl
+[314] Biber.pm:128> INFO - WARNINGS: 2

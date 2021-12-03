@@ -1,0 +1,237 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{AMohrmann2013}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=5a17577cb43e3306ff133ace1a703360}{%
+           family={Mohrmann},
+           familyi={M\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d946b4bea6c06ccb094a78027d28eaca}{%
+           family={Neumann},
+           familyi={N\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6439110d0330a5f23b0a5fda614c02ee}{%
+           family={Suendermann},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{350941b6693293c8bbaa6b970d1370d1}
+      \strng{fullhash}{350941b6693293c8bbaa6b970d1370d1}
+      \strng{bibnamehash}{350941b6693293c8bbaa6b970d1370d1}
+      \strng{authorbibnamehash}{350941b6693293c8bbaa6b970d1370d1}
+      \strng{authornamehash}{350941b6693293c8bbaa6b970d1370d1}
+      \strng{authorfullhash}{350941b6693293c8bbaa6b970d1370d1}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{09}
+      \field{title}{An artificial intelligence for the board game 'Quarto!' in Java}
+      \field{year}{2013}
+      \field{pages}{141\bibrangedash 146}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1145/2500828.2500842
+      \endverb
+    \endentry
+    \entry{cpluscode}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e2b26976457ce2a823a2a2db07c344e5}{%
+           family={Tomas\bibnamedelima Dohnalek},
+           familyi={T\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={J.\bibnamedelimi Bednarik},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2b26976457ce2a823a2a2db07c344e5}
+      \strng{fullhash}{e2b26976457ce2a823a2a2db07c344e5}
+      \strng{bibnamehash}{e2b26976457ce2a823a2a2db07c344e5}
+      \strng{authorbibnamehash}{e2b26976457ce2a823a2a2db07c344e5}
+      \strng{authornamehash}{e2b26976457ce2a823a2a2db07c344e5}
+      \strng{authorfullhash}{e2b26976457ce2a823a2a2db07c344e5}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Github repository]}
+      \field{title}{Using Minimax with Alpha-Beta pruning to play Quarto}
+      \verb{urlraw}
+      \verb https://github.com/dohnto/Quarto
+      \endverb
+      \verb{url}
+      \verb https://github.com/dohnto/Quarto
+      \endverb
+    \endentry
+    \entry{QuartoJenks}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e227300e55f8d350baf4978ada130fd8}{%
+           family={Jenks},
+           familyi={J\bibinitperiod},
+           given={Grant},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e227300e55f8d350baf4978ada130fd8}
+      \strng{fullhash}{e227300e55f8d350baf4978ada130fd8}
+      \strng{bibnamehash}{e227300e55f8d350baf4978ada130fd8}
+      \strng{authorbibnamehash}{e227300e55f8d350baf4978ada130fd8}
+      \strng{authornamehash}{e227300e55f8d350baf4978ada130fd8}
+      \strng{authorfullhash}{e227300e55f8d350baf4978ada130fd8}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quarto}
+      \field{urlday}{30}
+      \field{urlmonth}{4}
+      \field{urlyear}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.grantjenks.com/wiki/projects/quarto
+      \endverb
+      \verb{url}
+      \verb http://www.grantjenks.com/wiki/projects/quarto
+      \endverb
+    \endentry
+    \entry{Mattiussi2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5fe0411c2d4bd655ba8bae484e54373d}{%
+           family={Mattiussi},
+           familyi={M\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d0b355acfc6046b572a04400bf757691}{%
+           family={Marmelab.com},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{5fe0411c2d4bd655ba8bae484e54373d}
+      \strng{fullhash}{5fe0411c2d4bd655ba8bae484e54373d}
+      \strng{bibnamehash}{5fe0411c2d4bd655ba8bae484e54373d}
+      \strng{authorbibnamehash}{5fe0411c2d4bd655ba8bae484e54373d}
+      \strng{authornamehash}{5fe0411c2d4bd655ba8bae484e54373d}
+      \strng{authorfullhash}{5fe0411c2d4bd655ba8bae484e54373d}
+      \strng{editorbibnamehash}{d0b355acfc6046b572a04400bf757691}
+      \strng{editornamehash}{d0b355acfc6046b572a04400bf757691}
+      \strng{editorfullhash}{d0b355acfc6046b572a04400bf757691}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{[Online; posted 20-July-2018]}
+      \field{title}{Jouer pour mieux travailler : Le Quarto}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://marmelab.com/blog/2018/07/20/jouer-pour-mieux-travailler-le-quarto.html?fbclid=IwAR1bGxejTs4YO1EaXZaGbubP4wnopa8iosV4v4F0-FALw01vtDUETqxBqbs
+      \endverb
+      \verb{url}
+      \verb https://marmelab.com/blog/2018/07/20/jouer-pour-mieux-travailler-le-quarto.html?fbclid=IwAR1bGxejTs4YO1EaXZaGbubP4wnopa8iosV4v4F0-FALw01vtDUETqxBqbs
+      \endverb
+    \endentry
+    \entry{StrToPlay}{online}{}
+      \name{author}{2}{}{%
+        {{hash=34b874945b7cbd28d738da1c85d3b608}{%
+           family={Janet\bibnamedelima Chen},
+           familyi={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Su-I\bibnamedelima Lu},
+           giveni={S\bibinithyphendelim I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=6e34bf265fc4a521e6e4afd102496d1a}{%
+           family={Vekhter},
+           familyi={V\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{854a2aab858b054ee6f7d41bf49e9cee}
+      \strng{fullhash}{854a2aab858b054ee6f7d41bf49e9cee}
+      \strng{bibnamehash}{854a2aab858b054ee6f7d41bf49e9cee}
+      \strng{authorbibnamehash}{854a2aab858b054ee6f7d41bf49e9cee}
+      \strng{authornamehash}{854a2aab858b054ee6f7d41bf49e9cee}
+      \strng{authorfullhash}{854a2aab858b054ee6f7d41bf49e9cee}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Strategies of Play}
+      \field{urlday}{12}
+      \field{urlmonth}{11}
+      \field{urlyear}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cs.stanford.edu/people/eroberts/courses/soco/projects/1998-99/game-theory/Minimax.html
+      \endverb
+      \verb{url}
+      \verb https://cs.stanford.edu/people/eroberts/courses/soco/projects/1998-99/game-theory/Minimax.html
+      \endverb
+    \endentry
+    \entry{Heu}{online}{}
+      \name{author}{1}{}{%
+        {{hash=eaab94da21ff17aaf48b08eb90f64516}{%
+           family={Wohlner},
+           familyi={W\bibinitperiod},
+           given={Roger},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{eaab94da21ff17aaf48b08eb90f64516}
+      \strng{fullhash}{eaab94da21ff17aaf48b08eb90f64516}
+      \strng{bibnamehash}{eaab94da21ff17aaf48b08eb90f64516}
+      \strng{authorbibnamehash}{eaab94da21ff17aaf48b08eb90f64516}
+      \strng{authornamehash}{eaab94da21ff17aaf48b08eb90f64516}
+      \strng{authorfullhash}{eaab94da21ff17aaf48b08eb90f64516}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Heuristics}
+      \field{urlday}{28}
+      \field{urlmonth}{2}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.investopedia.com/terms/h/heuristics.asp
+      \endverb
+      \verb{url}
+      \verb https://www.investopedia.com/terms/h/heuristics.asp
+      \endverb
+    \endentry
+    \entry{AB}{online}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labeltitlesource}{title}
+      \field{title}{Alpha-Beta}
+      \field{urlday}{20}
+      \field{urlmonth}{11}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.chessprogramming.org/Alpha-Beta
+      \endverb
+      \verb{url}
+      \verb https://www.chessprogramming.org/Alpha-Beta
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
