@@ -42,5 +42,5 @@ class Turn(Action):
         if self.prev_turn:
             return f"Place {Piece.to_string(self.prev_turn.piece_to_place)} to {self.prev_turn.piece_coord} and choose {Piece.to_string(self.piece_to_place)}"
         else:
-            return f"Place {Piece.to_string(self.prev_turn.piece_to_place)} to {self.prev_turn.piece_coord} and choose {Piece.to_string(self.piece_to_place)}"
-            # return f"Player: {self.player}, \nPiece to place: {Piece.to_string(self.piece_to_place)}, \nPiece coordinate: {self.piece_coord} \n\n"
+            # return f"Place {Piece.to_string(self.prev_turn.piece_to_place)} to {self.prev_turn.piece_coord} and choose {Piece.to_string(self.piece_to_place)}"
+            return f"Player: {self.player}, \nPiece to place: {Piece.to_string(self.piece_to_place)}, \nPiece coordinate: {self.piece_coord} \n\n"
