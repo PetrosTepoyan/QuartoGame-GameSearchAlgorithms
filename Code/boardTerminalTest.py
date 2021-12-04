@@ -34,8 +34,6 @@ class BoardTerminalTest(TerminalTest):
             pieces = np.array([Piece.get_piece_by_id(p) for p in line]) #[piece_1, piece_2, piece_3, piece_4]
             prop = np.array([0, 0, 0, 0]) #round, big, light, hole
             
-            
-
             for piece in pieces: 
                 if piece.round_shape:
                     prop[0] += 1

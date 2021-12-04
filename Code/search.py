@@ -180,7 +180,7 @@ class AlphaBetaSearch(Search):
                 v = v2
                 move = action
                 beta_1 = min(beta_1, v)
-                
+
             if v <= alpha:
                 strategy[state] = move
                 self.state_utilities[new_state] = v  
@@ -188,7 +188,7 @@ class AlphaBetaSearch(Search):
                 return v
                 
         assert len(actions) != 0, "No actions were found and terminal test did not fire"
-            
+        
         strategy[state] = move
         self.state_utilities[new_state] = v  
         
