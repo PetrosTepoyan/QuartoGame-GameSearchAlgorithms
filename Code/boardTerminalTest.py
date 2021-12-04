@@ -1,6 +1,7 @@
 from tools import GRID_SIZE, PIECES_NUMBER, EMPTY_POSITION
 from player import Player 
 from piece import Piece
+import numpy as np
 
 class TerminalTest:
     def __init__(self):
@@ -27,14 +28,12 @@ class BoardTerminalTest(TerminalTest):
         
         return False
         
-    def _check_line_winning(self, piece1, piece2, piece3, piece4):
-        if EMPTY_POSITION not in (piece1, piece2, piece3, piece4):
-            piece_1 = Piece.get_piece_by_id(piece1)
-            piece_2 = Piece.get_piece_by_id(piece2)
-            piece_3 = Piece.get_piece_by_id(piece3)
-            piece_4 = Piece.get_piece_by_id(piece4)
-            pieces = [piece_1, piece_2, piece_3, piece_4]
-            prop = [0, 0, 0, 0] #round, big, light, hole
+    def _check_line_winning(self, line):
+        if EMPTY_POSITION not in line:
+            
+            pieces = np.array([Piece.get_piece_by_id(p) for p in line]) #[piece_1, piece_2, piece_3, piece_4]
+            prop = np.array([0, 0, 0, 0]) #round, big, light, hole
+            
             
 
             for piece in pieces: 
@@ -57,37 +56,28 @@ class BoardTerminalTest(TerminalTest):
         return False
     
     def check_draw(self, board):
-        # return len(board.remaining_pieces) == 0
-        grid = board.grid
-        for row in grid:
-            for elem in row:
-                if elem == EMPTY_POSITION:
-                    return False
-
-        return True
+        return not (board.grid == EMPTY_POSITION).any()
 
     def check_rows_winning(self, board):
         grid = board.grid
-        # print("Checking rows")
-        for row in grid:
-            if self._check_line_winning(row[0], row[1], row[2], row[3]):
+        for row in range(GRID_SIZE):
+            if self._check_line_winning(grid[row]):
                 return True
 
         return False
 
     def check_columns_winning(self, board):
         grid = board.grid
-        for i in range(4):
-            if self._check_line_winning(grid[0][i], grid[1][i], grid[2][i], grid[3][i]):
+        for col in range(GRID_SIZE):
+            if self._check_line_winning(grid[:,col]):
                 return True
 
         return False
 
     def check_diags_winning(self, board):
         grid = board.grid
-        # print("Checking diag")
-        if self._check_line_winning(grid[0][0], grid[1][1], grid[2][2], grid[3][3]) \
-                or self._check_line_winning(grid[0][3], grid[1][2], grid[2][1], grid[3][0]):
+        if self._check_line_winning(grid.diagonal()) \
+                or self._check_line_winning(np.fliplr(grid).diagonal()):
             return True
 
         return False
