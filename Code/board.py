@@ -39,7 +39,7 @@ class Board(State):
         if game_turn:
             self.game_turn = game_turn
         else:
-            self.game_turn = Turn(player = Player.MAX, piece_to_place = 0) ## choosing randomly for a player
+            self.game_turn = Turn() ## choosing randomly for a player
         
         
     ## Implementation of State methods
@@ -67,7 +67,6 @@ class Board(State):
 
                 actions.add(turn)
 
-        # optimize with numpy as np.where
         elif len(remaining_pieces) != 0:
             coords = np.where(self.grid == EMPTY_POSITION)
             for i in range(len(coords[0])):

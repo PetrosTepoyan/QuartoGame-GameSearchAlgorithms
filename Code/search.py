@@ -63,10 +63,10 @@ class MinimaxSearch(Search):
                 v = v2
                 move = action
         
-        # At the end we store the pairs (state, action) and (state, utility)
-        strategy[state] = move
-        self.state_utilities[new_state] = v
-        
+            # At the end we store the pairs (state, action) and (state, utility)
+            strategy[state] = move
+            self.state_utilities[new_state] = v
+            
         return v
     
     # Implementation and the explanation is nearly identical to the one above.
@@ -96,8 +96,8 @@ class MinimaxSearch(Search):
                 move = action
                   
         
-        strategy[state] = move
-        self.state_utilities[new_state] = v  
+            strategy[state] = move
+            self.state_utilities[new_state] = v  
         
         return v
 
@@ -127,6 +127,9 @@ class AlphaBetaSearch(Search):
         move = None
         
         actions = state.get_applicable_actions()
+
+        assert len(actions) != 0, f"No actions were found and terminal test did not fire {state}" 
+
         for action in actions:
             new_state = state.get_action_result(action)
             self._number_of_generated_states += 1
@@ -144,12 +147,9 @@ class AlphaBetaSearch(Search):
                 strategy[state] = move
                 self.state_utilities[new_state] = v
                 return v
-        
-        
-        assert len(actions) != 0, f"No actions were found and terminal test did not fire {state}" 
 
-        strategy[state] = move
-        self.state_utilities[new_state] = v
+            strategy[state] = move
+            self.state_utilities[new_state] = v
         
         return v
     
@@ -171,6 +171,8 @@ class AlphaBetaSearch(Search):
         
         actions = state.get_applicable_actions()
 
+        assert len(actions) != 0, "No actions were found and terminal test did not fire"
+
         for action in actions:
             new_state = state.get_action_result(action)
             self._number_of_generated_states += 1
@@ -186,10 +188,8 @@ class AlphaBetaSearch(Search):
                 self.state_utilities[new_state] = v  
         
                 return v
-                
-        assert len(actions) != 0, "No actions were found and terminal test did not fire"
-        
-        strategy[state] = move
-        self.state_utilities[new_state] = v  
+
+            strategy[state] = move
+            self.state_utilities[new_state] = v  
         
         return v

@@ -1,0 +1,130 @@
+---
+title: "Visualizations"
+author: "Petros Tepoyan"
+date: "12/5/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+library(reshape2)
+```
+
+```{r}
+title <- "Time for the search algorithms" 
+subtitle <- "mean of 5 runs, 1 loops each"
+columns <- c("MinimaxSearch", "MinimaxSearch(optimizied)", "AlphaBetaSearch", "AlphaBetaSearch(optimizied)")
+values <- c(54, 27.4, 4.94, 4.66) # s
+
+df <- data.frame(search = columns, time = values)
+
+time.vs.search <- ggplot(df, aes(x = reorder(search, -time), y = time, fill = search, )) + 
+  geom_col(show.legend = FALSE) + 
+  geom_text(aes(label = paste(values, "s")), nudge_y = 2) +
+  scale_y_continuous(breaks = c(0, 2, 4, 6, 20, 25, 30, 40)) + 
+  theme(
+    panel.background = element_blank(),
+    axis.line = element_line(),
+    axis.text.x = element_text(angle = 10, vjust = 0.7, face = "bold")
+  ) + 
+  xlab("Search type") +
+  ylab("Time (s)") +
+  ggtitle(label = title, subtitle = subtitle)
+
+time.vs.search
+
+ggsave("time.vs.search.png", time.vs.search, width = 6, height = 4)
+```
+
+```{r}
+title <- "Getting applicable actions from a turn"
+subtitle <- "mean of 100 runs, 100 loops each"
+turn <- seq(0, 16)
+time <- c(49.4, 595, 540, 453, 405, 342, 311, 245, 215, 163, 130, 99.8, 74.6, 52.1, 38.9, 27.7, 25.4)
+n.actions <- c(16, 240, 210, 210, 156, 132, 132, 90, 72, 56, 42, 30, 20, 12, 6, 2, 1)
+df <- data.frame(turn, time, n.actions)
+
+time.vs.turn <- ggplot(df, aes(x = turn, y = time)) + 
+  geom_col(color = "black", alpha = 0.7) +
+  geom_text(aes(label = n.actions), nudge_y = 20) +
+  theme(
+    panel.background = element_blank(),
+    axis.line = element_line(),
+    axis.text.x = element_text(face = "bold")
+  ) + 
+  scale_x_continuous(breaks = turn, labels = turn) + 
+  xlab("Turn") + 
+  ylab("Time (nano-sec)") + 
+  ggtitle(label = title, subtitle = subtitle)
+
+ggsave("time.vs.turn.png", time.vs.turn, width = 6, height = 4)
+```
+
+
+```{r}
+title <- "Terminal test methods for a draw-board"
+subtitle <- "mean of 100 runs, 100 loops each"
+terminal.test.func <- c("is_terminal", "check_draw", "check_rows_winning", "check_columns_winning", "check_diags_winning")
+terminal.test.time <- c(269, 3.26, 106, 105, 55.8) # nano-sec
+
+df <- data.frame(terminal.test.func, terminal.test.time)
+
+terminal.func.vs.terminal.time <- ggplot(df, aes(x = reorder(terminal.test.func, -terminal.test.time), y = terminal.test.time, fill = terminal.test.func)) + 
+  geom_col(show.legend = FALSE) + 
+  xlab("Function from TerminalTest") + 
+  ylab("Time (nano-sec)") + 
+  theme(
+    panel.background = element_blank(),
+    axis.line = element_line(),
+    axis.text.x = element_text(angle = 20, vjust = 0.5, face = "bold")
+  ) +
+  ggtitle(label = title, subtitle = subtitle)
+ggsave("terminal.func.vs.terminal.time.png", terminal.func.vs.terminal.time, width = 6, height = 4)
+```
+
+```{r}
+title <- "Internal functions of Board class"
+board.func <- c("__eq__", "__hash__")
+board.func.time <- c(72, 7.34) # nano-sec
+df <- data.frame(board.func, board.func.time)
+
+board.func.vs.board.func.time <- ggplot(df) +
+  geom_col(aes(x = board.func, y = board.func.time, fill = board.func), show.legend = FALSE) + 
+  xlab("Board functions") + 
+  ylab("Time (nano-sec)") +
+  theme(
+    panel.background = element_blank(),
+    axis.line = element_line(),
+    axis.text.x = element_text(face = "bold")
+  ) +
+  ggtitle(label = title)
+ggsave("board.func.vs.board.func.time.png", board.func.vs.board.func.time, width = 6, height = 4)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
