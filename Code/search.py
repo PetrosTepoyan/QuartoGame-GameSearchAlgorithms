@@ -1,4 +1,5 @@
 from math import inf
+from player import Player
 
 class Search:
     
@@ -18,6 +19,17 @@ class Search:
         
     def find_strategy(self, initial_state, terminal_test):
         pass
+
+    def set_utility_for(self, initial_state):
+        player = initial_state.get_player()
+        actions = initial_state.get_applicable_actions()
+
+        states = {initial_state.get_action_result(action) for action in actions}
+        utilities = [self.state_utilities[state] for state in states]
+        if player == Player.MAX:
+            self.state_utilities[initial_state] = max(utilities)
+        else:
+            self.state_utilities[initial_state] = min(utilities)
     
     # This function will simply return the instance member. 
     def number_of_generated_states(self):
@@ -30,6 +42,7 @@ class MinimaxSearch(Search):
         strategy = {}
         self._number_of_generated_states = 0
         self.max_value(initial_state, terminal_test, strategy)
+        self.set_utility_for(initial_state)
         return strategy
 
     def max_value(self, state, terminal_test, strategy):
@@ -85,8 +98,6 @@ class MinimaxSearch(Search):
         
         actions = state.get_applicable_actions()
 
-        #print("How many actions", len(actions))
-
         for action in actions:
             new_state = state.get_action_result(action)
             self._number_of_generated_states += 1
@@ -94,7 +105,6 @@ class MinimaxSearch(Search):
             if v2 < v:
                 v = v2
                 move = action
-                  
         
             strategy[state] = move
             self.state_utilities[new_state] = v  
@@ -108,6 +118,7 @@ class AlphaBetaSearch(Search):
         self.state_utilities = {}
         self._number_of_generated_states = 0
         self.max_value(initial_state, terminal_test, -inf, inf, strategy)
+        self.set_utility_for(initial_state)
         return strategy
 
     def max_value(self, state, terminal_test, alpha, beta, strategy):

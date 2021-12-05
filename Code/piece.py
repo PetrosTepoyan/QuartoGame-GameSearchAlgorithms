@@ -103,3 +103,22 @@ pieces_dict = {
     16: Piece(16, True, True, True, True)
 }
 
+str_to_pieceid = {
+ 'BS■': 1,
+ 'BS●': 2,
+ 'BB■': 3,
+ 'BB●': 4,
+ 'WS■': 5,
+ 'WS●': 6,
+ 'WB■': 7,
+ 'WB●': 8,
+ 'BS□': 9,
+ 'BS○': 10,
+ 'BB□': 11,
+ 'BB○': 12,
+ 'WS□': 13,
+ 'WS○': 14,
+ 'WB□': 15,
+ 'WB○': 16
+ }
+
